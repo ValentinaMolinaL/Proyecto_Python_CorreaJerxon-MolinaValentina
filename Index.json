@@ -1,0 +1,61 @@
+[
+    {
+        "Clase": "Inscrito",
+        "Personas":[
+            {
+                "Identificacion":10049223213,
+                "Nombre":"Jerxon",
+                "Apellido":"Correa",
+                "Estado":"Inscrito"
+            }
+        ]
+    },
+    {
+        "Clase": "Cursando",
+        "Personas":[
+            {  
+                "Grupo":"T1",
+                "Identificacion":1009323,
+                "Nombre":"Isabel",
+                "Apellido":"Molina",
+                "Estado":"Cursando"
+            },
+            {
+                "Grupo":"T2",
+                "Identificacion":102382,
+                "Nombre":"Luis",
+                "Apellido":"Lopez",
+                "Estado":"Cursando"
+            },
+            {
+                "Grupo":"T3",
+                "Identificacion":10233421,
+                "Nombre":"Juan",
+                "Apellido":"Montallanta",
+                "Estado":"Cursando"
+            }
+        ]
+    },
+    {
+        "Clase": "Fuera",
+        "Personas":[
+            {
+                "Identificacion":100000,
+                "Nombre":"Zully",
+                "Apellido":"Ortiz",
+                "Estado":"Retirado"
+            }
+        ]
+    },
+    {
+        "Clase": "Direccion",
+        "Personas":[
+            {
+                "Identificacion":93238192,
+                "Nombre":"Stiven",
+                "Apellido":"Carvajal",
+                "Contraseña":927391
+            }
+        ]
+    }
+]
