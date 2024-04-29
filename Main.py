@@ -187,4 +187,4 @@ while bol:
         print("Presiona Enter para salir")
         bol=False
 
-#Hecho por Jerxon Correa y Valentina Molina
+#Hecho por Jerxon Correa CC.1004922559 y Valentina Molina CC.1007109135
