@@ -1,60 +1,147 @@
 [
     {
         "Clase": "Inscrito",
-        "Personas":[
+        "Personas": [
             {
-                "Identificacion":10049223213,
-                "Nombre":"Jerxon",
-                "Apellido":"Correa",
-                "Estado":"Inscrito"
+                "Grupo": "Inscrito",
+                "Identificacion": 12181923,
+                "Nombre": "Jair",
+                "Apellido": "Correa",
+                "Estado": "Inscrito",
+                "Direccion": "",
+                "Acudiente": "",
+                "Celular": "",
+                "Fijo": "",
+                "NotaI": 0
+            },
+            {
+                "Grupo": "Inscrito",
+                "Identificacion": 1,
+                "Nombre": "1",
+                "Apellido": "1",
+                "Estado": "Aprobado",
+                "Direccion": "1",
+                "Acudiente": "1",
+                "Celular": 1,
+                "Fijo": 1,
+                "NotaI": 80
+            },
+            {
+                "Grupo": "Inscrito",
+                "Identificacion": 2,
+                "Nombre": "2",
+                "Apellido": "2",
+                "Estado": "Reprobado",
+                "Direccion": "2",
+                "Acudiente": "2",
+                "Celular": 2,
+                "Fijo": 2,
+                "Nota": 0,
+                "NotaI": 20
             }
         ]
     },
     {
         "Clase": "Cursando",
-        "Personas":[
-            {  
-                "Grupo":"T1",
-                "Identificacion":1009323,
-                "Nombre":"Isabel",
-                "Apellido":"Molina",
-                "Estado":"Cursando"
+        "Personas": [
+            {
+                "Grupo": "T1",
+                "Identificacion": 1009323,
+                "Nombre": "Isabel",
+                "Apellido": "Molina",
+                "Estado": "Cursando",
+                "Direccion": "",
+                "Acudiente": "",
+                "Celular": "",
+                "Fijo": "",
+                "Trainer": "Esteban",
+                "Horas": "Nose",
+                "Notas": [
+                    {
+                        "Filtro1": 0,
+                        "Filtro2": 0,
+                        "Filtro3": 0,
+                        "Filtro4": 0,
+                        "Filtro5": 0
+                    }
+                ]
             },
             {
-                "Grupo":"T2",
-                "Identificacion":102382,
-                "Nombre":"Luis",
-                "Apellido":"Lopez",
-                "Estado":"Cursando"
+                "Grupo": "T2",
+                "Identificacion": 102382,
+                "Nombre": "Luis",
+                "Apellido": "Lopez",
+                "Estado": "Cursando",
+                "Direccion": "",
+                "Acudiente": "",
+                "Celular": "",
+                "Fijo": "",
+                "Trainer": "Rocio",
+                "Horas": "Nose",
+                "Notas": [
+                    {
+                        "Filtro1": 0,
+                        "Filtro2": 0,
+                        "Filtro3": 0,
+                        "Filtro4": 0,
+                        "Filtro5": 0
+                    }
+                ]
             },
             {
-                "Grupo":"T3",
-                "Identificacion":10233421,
-                "Nombre":"Juan",
-                "Apellido":"Montallanta",
-                "Estado":"Cursando"
+                "Grupo": "T3",
+                "Identificacion": 10233421,
+                "Nombre": "Juan",
+                "Apellido": "Montallanta",
+                "Estado": "Cursando",
+                "Direccion": "",
+                "Acudiente": "",
+                "Celular": "",
+                "Fijo": "",
+                "Trainer": "Kyle",
+                "Horas": "Nose",
+                "Notas": [
+                    {
+                        "Filtro1": 0,
+                        "Filtro2": 0,
+                        "Filtro3": 0,
+                        "Filtro4": 0,
+                        "Filtro5": 0
+                    }
+                ]
             }
         ]
     },
     {
         "Clase": "Fuera",
-        "Personas":[
+        "Personas": [
             {
-                "Identificacion":100000,
-                "Nombre":"Zully",
-                "Apellido":"Ortiz",
-                "Estado":"Retirado"
+                "Identificacion": 100000,
+                "Nombre": "Zully",
+                "Apellido": "Ortiz",
+                "Estado": "Retirado"
             }
         ]
     },
     {
         "Clase": "Direccion",
-        "Personas":[
+        "Personas": [
             {
-                "Identificacion":93238192,
-                "Nombre":"Stiven",
-                "Apellido":"Carvajal",
-                "Contraseña":927391
+                "Identificacion": 1,
+                "Nombre": "Stiven",
+                "Apellido": "Carvajal",
+                "Contrase\u00f1a": 927391
+            }
+        ]
+    },
+    {
+        "Clase": "Trainers",
+        "Personas": [
+            {
+                "Identificacion": 92831283,
+                "Nombre": "Esteban",
+                "Apellido": "Gomez",
+                "Grupo": "T1"
             }
         ]
     }
