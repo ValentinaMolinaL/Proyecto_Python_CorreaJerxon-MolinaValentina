@@ -38,6 +38,32 @@
                 "Fijo": 2,
                 "Nota": 0,
                 "NotaI": 20
+            },
+            {
+                "Grupo": "Inscrito",
+                "Identificacion": 3,
+                "Nombre": "3",
+                "Apellido": "3",
+                "Estado": "ProcesoIngreso",
+                "Direccion": "3",
+                "Acudiente": "3",
+                "Celular": 3,
+                "Fijo": 3,
+                "Nota": 0,
+                "NotaI": 70
+            },
+            {
+                "Grupo": "Inscrito",
+                "Identificacion": 4,
+                "Nombre": "4",
+                "Apellido": "4",
+                "Estado": "Reprobado",
+                "Direccion": "4",
+                "Acudiente": "4",
+                "Celular": 4,
+                "Fijo": 4,
+                "Nota": 0,
+                "NotaI": 40
             }
         ]
     },
@@ -49,7 +75,7 @@
                 "Identificacion": 1009323,
                 "Nombre": "Isabel",
                 "Apellido": "Molina",
-                "Estado": "Cursando",
+                "Estado": "la mala",
                 "Direccion": "",
                 "Acudiente": "",
                 "Celular": "",
@@ -71,7 +97,7 @@
                 "Identificacion": 102382,
                 "Nombre": "Luis",
                 "Apellido": "Lopez",
-                "Estado": "Cursando",
+                "Estado": "fuera",
                 "Direccion": "",
                 "Acudiente": "",
                 "Celular": "",
@@ -119,7 +145,7 @@
                 "Identificacion": 100000,
                 "Nombre": "Zully",
                 "Apellido": "Ortiz",
-                "Estado": "Retirado"
+                "Estado": "pola"
             }
         ]
     },
@@ -142,7 +168,24 @@
                 "Nombre": "Esteban",
                 "Apellido": "Gomez",
                 "Grupo": "T1"
+            },
+            {
+                "Identificacion": 231247,
+                "Nombre": "Jose",
+                "Apellido": "Ramirez",
+                "Grupo": "T2"
+            },
+            {
+                "Identificacion": 8364826,
+                "Nombre": "Maria",
+                "Apellido": "Pedragoza",
+                "Grupo": "T3"
             }
         ]
+    },
+    {
+        "FechaI": "11-05-2023",
+        "FechaF": "06-50-2333",
+        "InicioE": "True"
     }
 ]
