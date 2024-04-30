@@ -6,9 +6,11 @@ Inicio=False
 bol=True
 while bol:
     Data[0]["Personas"][0]
-    IE=[];TE=[];IC=[];T1=[];T2=[];T3=[];PI=[];T123=[];Eli=[];PR=[]
+    IE=[];TE=[];IC=[];T1=[];T2=[];T3=[];PI=[];T123=[];Eli=[];PR=[];PrIn=[]
     for i in range(0,len(Data[0]["Personas"])):
         PI.append(Data[0]["Personas"][i])
+        if Data[0]["Personas"][i]["Estado"]=="ProcesoIngreso":
+            PrIn.append(Data[0]["Personas"][i])
     for i in range(0,len(Data[1]["Personas"])):
         IE.append(Data[1]["Personas"][i]["Identificacion"])
         TE.append(Data[1]["Personas"][i])
@@ -38,9 +40,10 @@ while bol:
                 with open("Index.json",encoding="utf-8") as file:
                     Data=json.load(file)
                 Data[0]["Personas"][0]
-                IE=[];TE;IC=[];T1=[];T2=[];T3=[];PI=[];T123=[];PR=[]
+                IE=[];TE;IC=[];T1=[];T2=[];T3=[];PI=[];T123=[];PR=[];PrIn=[]
                 for i in range(0,len(Data[0]["Personas"])):
-
+                    if Data[0]["Personas"][i]["Estado"]=="ProcesoIngreso":
+                        PrIn.append(Data[0]["Personas"][i])
                     PI.append(Data[0]["Personas"][i])
                 for i in range(0,len(Data[1]["Personas"])):
                     IE.append(Data[1]["Personas"][i]["Identificacion"])
@@ -184,7 +187,71 @@ while bol:
                             with open("index.json","w") as file:
                                 json.dump(Data,file)
                             print(input("Presione Enter para continuar"))
-
+                elif Opcion==8:
+                    bol5=True
+                    while bol5:
+                        print("=========================================================\n1).Agregar profesores a un grupo de estudiantes.\n2).Agregar estudiantes a un grupo.\n3).Salir")
+                        Opcion=int(input("Ingrese un numero para ir a la opcion deseada.\n"))
+                        if Opcion==1:
+                            print("======================================================\n1).T1.\n2).T2\n3).T3\n4).Salir\n======================================================")
+                            Opcion=int(input("Ingresa el numero del grupo al que deseas agregar el profesor.\n"))
+                            CompaId=int(input("Ingrese la ID del profesor que quieres asignar a un grupo."))
+                            if Opcion==1:
+                                print("")
+                            elif Opcion==2:
+                                print("")
+                            elif Opcion==3:
+                                print("")
+                            elif Opcion==4:
+                                print("")
+                        elif Opcion==2:
+                            print("======================================================\n1).Agregar.\n2).Salir.\n======================================================")
+                            Opcion=int(input("Ingresa con un numero el grupo al que deseas añadir el estudiante."))
+                            if Opcion==1:
+                                Grupo=str(input("Ingrese el nombre del grupo al que desea agregarlo. (T1,T2,T3)\n"))
+                                CompaId=int(input("Ingrese la identificacion de la persona.\n"))
+                                for i in range(0,len(PrIn)):
+                                    if CompaId == PrIn[i]["Identificacion"]:
+                                        Data[1]["Personas"].append({
+                                            "Grupo": Grupo,
+                                            "Identificacion": PrIn[i]["Identificacion"],
+                                            "Nombre": PrIn[i]["Nombre"],
+                                            "Apellido": PrIn[i]["Apellido"],
+                                            "Estado": "Cursando",
+                                            "Direccion": PrIn[i]["Direccion"],
+                                            "Acudiente": PrIn[i]["Acudiente"],
+                                            "Celular": PrIn[i]["Celular"],
+                                            "Fijo": PrIn[i]["Fijo"],
+                                            "Trainer": "",
+                                            "Horas": "",
+                                            "Notas": [
+                                                {
+                                                    "Filtro1": 0,
+                                                    "Filtro2": 0,
+                                                    "Filtro3": 0,
+                                                    "Filtro4": 0,
+                                                    "Filtro5": 0
+                                                }
+                                            ]
+                                        })
+                                        print(input("Presione Enter para continuar"))
+                                        with open("Index.json","w") as file:
+                                            json.dump(Data,file)
+                                        del Data[0]["Personas"][i]
+                                        break
+                                    else:
+                                        if i==len(Eli)-1:
+                                            print("No se encontro alguna persona por esa id.")
+                                            print(input("Presione Enter para continuar"))
+                            elif Opcion==2:
+                                print("")
+                            elif Opcion==3:
+                                print("")
+                            elif Opcion==4:
+                                print("")
+                        elif Opcion==3:
+                            print(input("Presione Enter para ir al menu principal"))
+                            bol5=False
                 elif Opcion==9:
                     bol5:True
                     while bol5:
