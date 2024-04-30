@@ -241,8 +241,6 @@ while bol:
     elif Opcion==2:#15
         print("La mala pa zully")
     elif Opcion==3:
-        IIden=int(input("Ingresa tu usuario.\n"))
-        if IIden in IE:
             bol2=True
             while bol2:
                 print("Usuario encontrado.")
