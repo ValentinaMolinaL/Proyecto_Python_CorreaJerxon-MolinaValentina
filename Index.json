@@ -19,12 +19,12 @@
                 "Identificacion": 1,
                 "Nombre": "1",
                 "Apellido": "1",
-                "Estado": "Aprobado",
+                "Estado": "Reprobado",
                 "Direccion": "1",
                 "Acudiente": "1",
                 "Celular": 1,
                 "Fijo": 1,
-                "NotaI": 80
+                "NotaI": 50
             },
             {
                 "Grupo": "Inscrito",
@@ -82,6 +82,7 @@
                 "Fijo": "",
                 "Trainer": "Esteban",
                 "Horas": "Nose",
+                "Rendimiento": "alto",
                 "Notas": [
                     {
                         "Filtro1": 0,
@@ -104,6 +105,7 @@
                 "Fijo": "",
                 "Trainer": "Rocio",
                 "Horas": "Nose",
+                "Rendimiento": "alto",
                 "Notas": [
                     {
                         "Filtro1": 0,
@@ -126,6 +128,7 @@
                 "Fijo": "",
                 "Trainer": "Kyle",
                 "Horas": "Nose",
+                "Rendimiento": "alto",
                 "Notas": [
                     {
                         "Filtro1": 0,
@@ -167,19 +170,22 @@
                 "Identificacion": 92831283,
                 "Nombre": "Esteban",
                 "Apellido": "Gomez",
-                "Grupo": "T1"
+                "Grupo": "T1",
+                "Estado":"Activo"
             },
             {
                 "Identificacion": 231247,
                 "Nombre": "Jose",
                 "Apellido": "Ramirez",
-                "Grupo": "T2"
+                "Grupo": "T2",
+                "Estado":"Activo"
             },
             {
                 "Identificacion": 8364826,
                 "Nombre": "Maria",
                 "Apellido": "Pedragoza",
-                "Grupo": "T3"
+                "Grupo": "T3",
+                "Estado":"Activo"
             }
         ]
     },

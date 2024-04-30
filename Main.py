@@ -114,7 +114,7 @@ while bol:
                         print("Ya iniciaste los examenes")
                     print(input("Presione Enter para continuar"))
                 elif Opcion==5:
-                    if Inicio:
+                    if Data[5]["InicioE"]=="True":
                         CompaId=int(input("Ingrese el numero de identificacion del estudiante al que le deseas colocar la nota.\n"))
                         for i in range(0,len(PI)):
                             if CompaId == PI[i]["Identificacion"]:
@@ -203,10 +203,13 @@ while bol:
                 elif Opcion==10:
                     print("==================================================")
                     for i in range(0,len(PR)):
-                        print("===========Profesor===========\nIdentificacion:",PR[i]["Identificacion"],"\nNombre:",PR[i]["Nombre"]+" "+PR[i]["Apellido"],"\nGrupo:",PR[i]["Grupo"])
+                        print("===========Estudiante===========\nIdentificacion:",PR[i]["Identificacion"],"\nNombre:",PR[i]["Nombre"]+" "+PR[i]["Apellido"],"\nEstado:",PR[i]["Estado"],"\nGrupo:",PR[i]["Grupo"])
                     print(input("Presione Enter para continuar"))
                 elif Opcion==11:
-                    print("bola")
+                    for i in range (0,len(Data[1])):
+                        if Data[1]["Personas"][i]["Rendimiento"] == "alto":
+                            print("Identificacion:",T123[i]["Identificacion"],"\nNombre:",  T123[i]["Nombre"]+" "+T123[i]["Apellido"],"\nRendimiento:",T123[i]["Rendimiento"])
+                        print(input("presione enter continuar"))
                 elif Opcion==12:
                     bol3=True
                     while bol3:
@@ -239,28 +242,37 @@ while bol:
             print(input("Presione Enter para seguir al menu principal"))
             
     elif Opcion==2:#15
-        print("La mala pa zully")
+        bol2=True
+        while bol2:
+            CompaId=int(input("Ingrese la identificacion de la persona.\n"))
+            for i in range(0,len(PR)):
+                if CompaId == PR[i]["Identificacion"]:
+                    print("===========Estudiante===========\nIdentificacion:",PR[i]["Identificacion"],"\nNombre:",PR[i]["Nombre"]+" "+PR[i]["Apellido"],"\nEstado:",PR[i]["Estado"],"\nGrupo:",PR[i]["Grupo"])
+                    print(input("Presione Enter para continuar"))
+                    bol2=False
+                    break
+                else:
+                    if i==len(PR)-1:
+                        print("No se encontro alguna persona por esa id.")
+                        print(input("Presione Enter para continuar"))
+                        bol2=False
+                    
     elif Opcion==3:
             bol2=True
             while bol2:
-                print("Usuario encontrado.")
-                print("================================================\n1).Notas.\n2).Horas de estudio\n3).Trainer\n4).Estado\n5).Salon\n6).Salir\n================================================")
-                Opcion=int(input("Ingrese un numero para ir a la opcion deseada.\n"))
-                if Opcion==1:
-                    print("Notas")
-                elif Opcion==2:
-                    print("Horas")
-                elif Opcion==3:
-                    print("Trainer")
-                elif Opcion==4:
-                    print("Estado")
-                elif Opcion==5:
-                    print("Salon")
-                elif Opcion==6:
-                    print("Salir")
-        else:
-            print("Este usuario no se encuentra registrado.")
-            print(input("Presione Enter para continuar"))
+                CompaId=int(input("Ingrese la identificacion de la persona.\n"))
+                for i in range(0,len(T123)):
+                    if CompaId == T123[i]["Identificacion"]:
+                        print("===========Estudiante===========\nIdentificacion:",T123[i]["Identificacion"],"\nNombre:",T123[i]["Nombre"]+" "+T123[i]["Apellido"],"\nEstado:",T123[i]["Estado"],"\nTrainer:",T123[i]["Trainer"])
+                        print(input("Presione Enter para continuar"))
+                        bol2=False
+                        break
+                    else:
+                        if i==len(T123)-1:
+                            print("No se encontro alguna persona por esa id.")
+                            print(input("Presione Enter para continuar"))
+                            bol2=False
+                    
     elif Opcion==4:
         Consulta=int(input("Ingrese su codigo para saber el estado de aprobacion del estudiante.\n"))
         for i in range(0,len(PI)):
@@ -280,6 +292,7 @@ while bol:
                 if i==len(PI)-1:
                     print("No se encontro alguna persona por esa id.")
                     print(input("Presione Enter para continuar"))
+                    bol2=False
     else:
         print("Adios <(;D")
         print("Presiona Enter para salir")
