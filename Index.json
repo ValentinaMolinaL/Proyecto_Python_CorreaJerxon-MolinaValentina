@@ -41,19 +41,6 @@
             },
             {
                 "Grupo": "Inscrito",
-                "Identificacion": 3,
-                "Nombre": "3",
-                "Apellido": "3",
-                "Estado": "ProcesoIngreso",
-                "Direccion": "3",
-                "Acudiente": "3",
-                "Celular": 3,
-                "Fijo": 3,
-                "Nota": 0,
-                "NotaI": 70
-            },
-            {
-                "Grupo": "Inscrito",
                 "Identificacion": 4,
                 "Nombre": "4",
                 "Apellido": "4",

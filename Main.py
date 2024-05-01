@@ -237,8 +237,6 @@ while bol:
                                         print(input("Presione Enter para continuar"))
                                         with open("Index.json","w") as file:
                                             json.dump(Data,file)
-                                        del Data[0]["Personas"][i]
-                                        break
                                     else:
                                         if i==len(Eli)-1:
                                             print("No se encontro alguna persona por esa id.")
