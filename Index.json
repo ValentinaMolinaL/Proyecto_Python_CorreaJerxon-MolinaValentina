@@ -4,30 +4,6 @@
         "Personas": [
             {
                 "Grupo": "Inscrito",
-                "Identificacion": 12181923,
-                "Nombre": "Jair",
-                "Apellido": "Correa",
-                "Estado": "Inscrito",
-                "Direccion": "",
-                "Acudiente": "",
-                "Celular": "",
-                "Fijo": "",
-                "NotaI": 0
-            },
-            {
-                "Grupo": "Inscrito",
-                "Identificacion": 1,
-                "Nombre": "1",
-                "Apellido": "1",
-                "Estado": "Reprobado",
-                "Direccion": "1",
-                "Acudiente": "1",
-                "Celular": 1,
-                "Fijo": 1,
-                "NotaI": 50
-            },
-            {
-                "Grupo": "Inscrito",
                 "Identificacion": 2,
                 "Nombre": "2",
                 "Apellido": "2",
@@ -38,19 +14,6 @@
                 "Fijo": 2,
                 "Nota": 0,
                 "NotaI": 20
-            },
-            {
-                "Grupo": "Inscrito",
-                "Identificacion": 4,
-                "Nombre": "4",
-                "Apellido": "4",
-                "Estado": "Reprobado",
-                "Direccion": "4",
-                "Acudiente": "4",
-                "Celular": 4,
-                "Fijo": 4,
-                "Nota": 0,
-                "NotaI": 40
             }
         ]
     },
@@ -125,6 +88,50 @@
                         "Filtro5": 0
                     }
                 ]
+            },
+            {
+                "Grupo": "t1",
+                "Identificacion": 3,
+                "Nombre": "3",
+                "Apellido": "3",
+                "Estado": "Cursando",
+                "Direccion": "3",
+                "Acudiente": "3",
+                "Celular": 3,
+                "Fijo": 3,
+                "Trainer": "",
+                "Horas": "",
+                "Notas": [
+                    {
+                        "Filtro1": 0,
+                        "Filtro2": 0,
+                        "Filtro3": 0,
+                        "Filtro4": 0,
+                        "Filtro5": 0
+                    }
+                ]
+            },
+            {
+                "Grupo": "T1",
+                "Identificacion": 4,
+                "Nombre": "4",
+                "Apellido": "4",
+                "Estado": "Cursando",
+                "Direccion": "4",
+                "Acudiente": "4",
+                "Celular": 4,
+                "Fijo": 4,
+                "Trainer": "",
+                "Horas": "",
+                "Notas": [
+                    {
+                        "Filtro1": 0,
+                        "Filtro2": 0,
+                        "Filtro3": 0,
+                        "Filtro4": 0,
+                        "Filtro5": 0
+                    }
+                ]
             }
         ]
     },
@@ -158,21 +165,21 @@
                 "Nombre": "Esteban",
                 "Apellido": "Gomez",
                 "Grupo": "T1",
-                "Estado":"Activo"
+                "Estado": "Activo"
             },
             {
                 "Identificacion": 231247,
                 "Nombre": "Jose",
                 "Apellido": "Ramirez",
                 "Grupo": "T2",
-                "Estado":"Activo"
+                "Estado": "Activo"
             },
             {
                 "Identificacion": 8364826,
                 "Nombre": "Maria",
                 "Apellido": "Pedragoza",
                 "Grupo": "T3",
-                "Estado":"Activo"
+                "Estado": "Activo"
             }
         ]
     },

@@ -205,51 +205,49 @@ while bol:
                             elif Opcion==4:
                                 print("")
                         elif Opcion==2:
-                            print("======================================================\n1).Agregar.\n2).Salir.\n======================================================")
-                            Opcion=int(input("Ingresa con un numero el grupo al que deseas añadir el estudiante."))
-                            if Opcion==1:
-                                Grupo=str(input("Ingrese el nombre del grupo al que desea agregarlo. (T1,T2,T3)\n"))
+                            Grupo=str(input("Ingrese el nombre del grupo al que desea agregarlo. (T1,T2,T3)\n"))
+                                #if Data:"
                                 CompaId=int(input("Ingrese la identificacion de la persona.\n"))
-                                for i in range(0,len(PrIn)):
-                                    if CompaId == PrIn[i]["Identificacion"]:
-                                        Data[1]["Personas"].append({
-                                            "Grupo": Grupo,
-                                            "Identificacion": PrIn[i]["Identificacion"],
-                                            "Nombre": PrIn[i]["Nombre"],
-                                            "Apellido": PrIn[i]["Apellido"],
-                                            "Estado": "Cursando",
-                                            "Direccion": PrIn[i]["Direccion"],
-                                            "Acudiente": PrIn[i]["Acudiente"],
-                                            "Celular": PrIn[i]["Celular"],
-                                            "Fijo": PrIn[i]["Fijo"],
-                                            "Trainer": "",
-                                            "Horas": "",
-                                            "Notas": [
-                                                {
-                                                    "Filtro1": 0,
-                                                    "Filtro2": 0,
-                                                    "Filtro3": 0,
-                                                    "Filtro4": 0,
-                                                    "Filtro5": 0
-                                                }
-                                            ]
-                                        })
-                                        print(input("Presione Enter para continuar"))
-                                        with open("Index.json","w") as file:
-                                            json.dump(Data,file)
-                                    else:
-                                        if i==len(Eli)-1:
-                                            print("No se encontro alguna persona por esa id.")
+                                for i in range(0,len(PI)):
+                                    if CompaId == PI[i]["Identificacion"]:
+                                        if PI[i]["Estado"] == "ProcesoIngreso":
+                                            Data[1]["Personas"].append({
+                                                "Grupo": Grupo,
+                                                "Identificacion": PI[i]["Identificacion"],
+                                                "Nombre": PI[i]["Nombre"],
+                                                "Apellido": PI[i]["Apellido"],
+                                                "Estado": "Cursando",
+                                                "Direccion": PI[i]["Direccion"],
+                                                "Acudiente": PI[i]["Acudiente"],
+                                                "Celular": PI[i]["Celular"],
+                                                "Fijo": PI[i]["Fijo"],
+                                                "Trainer": "",
+                                                "Horas": "",
+                                                "Notas": [
+                                                    {
+                                                        "Filtro1": 0,
+                                                        "Filtro2": 0,
+                                                        "Filtro3": 0,
+                                                        "Filtro4": 0,
+                                                        "Filtro5": 0
+                                                    }
+                                                ]
+                                            })
                                             print(input("Presione Enter para continuar"))
-                            elif Opcion==2:
-                                print("")
-                            elif Opcion==3:
-                                print("")
-                            elif Opcion==4:
-                                print("")
-                        elif Opcion==3:
-                            print(input("Presione Enter para ir al menu principal"))
-                            bol5=False
+                                            Data[0]["Personas"].pop(i)
+                                            with open("index.json","w") as file:
+                                                json.dump(Data,file)
+                                        else:
+                                            print("La persona ha reprovado el examen te esperamos la proxima.")
+
+                                    else:
+                                        if i==len(PrIn)-1:                                            
+                                            print("La persona no se encuntra registrada por esa id.")
+                                            print(input("Presione Enter para continuar"))
+                            else:
+                                print("lo sentimos el salon ",Grupo,"esta en su limite de campers")
+                            
+                                bol5=False
                 elif Opcion==9:
                     bol5:True
                     while bol5:
