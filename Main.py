@@ -1,5 +1,4 @@
 import json,os
-
 with open("Index.json",encoding="utf-8") as file:
     Data=json.load(file)
 Inicio=False
@@ -17,7 +16,6 @@ while bol:
     for i in range(0,len(Data[4]["Personas"])):
         PR.append(Data[4]["Personas"][i])
     IC.append(Data[3]["Personas"][0]["Identificacion"])
-
     for i in range(0,len(Data[2]["Personas"])):
         Eli.append(Data[2]["Personas"][i])
     for i in range(0,len(Data[1]["Personas"])):
@@ -55,7 +53,6 @@ while bol:
                         TE.append(Data[1]["Personas"][i])
                     for i in range(0,len(Data[4]["Personas"])):
                         PR.append(Data[4]["Personas"][i])
-
                     IC.append(Data[3]["Personas"][0]["Identificacion"])
                     for i in range(0,len(Data[2]["Personas"])):
                         Eli.append(Data[2]["Personas"][i])
@@ -68,7 +65,7 @@ while bol:
                         elif Data[1]["Personas"][i]["Grupo"]=="T3":
                             T3.append(Data[1]["Personas"][i])
                     os.system("cls")
-                    print("================================================\n1).Inscripción.\n2).Ver personas inscritas.\n3).Establecer fecha de inicio y finalizacion.\n4).Iniciar examen.\n5).Ingresar nota de examenes iniciales\n6).Establecer horarios.\n7).Cambiar estados de los estudiantes\n8).Destinar trainers y estudiantes a cada grupo.\n9).Ver rutas.\n10).Profesores registrados.\n11).Estudiantes en rendimiento bajo\n12).Ver campers.\n13).Notas de filtro.\n14).Salir\n================================================")
+                    print("================================================\n1).Inscripción.\n2).Ver personas inscritas.\n3).Establecer fecha de inicio y finalizacion.\n4).Iniciar examen.\n5).Ingresar nota de examenes iniciales.\n6).Cambiar estados de los estudiantes\n7).Destinar trainers y estudiantes a cada grupo.\n8).Profesores registrados.\n9).Estudiantes en rendimiento bajo\n10).Ver campers.\n11).Notas de filtro.\n12).Salir\n================================================")
                     Opcion=int(input("Ingrese un numero para ir a la opcion deseada.\n"))
                     if Opcion==1:
                         print("Inscripcion")
@@ -96,7 +93,6 @@ while bol:
                         with open("index.json","w") as file:
                             json.dump(Data,file)
                         print(input("Presione Enter para continuar"))
-
                     elif Opcion==2:
                         for i in range(0,len(PI)):
                                 print("=========Inscritos========")
@@ -144,8 +140,6 @@ while bol:
                             print("No se han iniciado los examenes por lo tanto no se puede añadir notas")
                             print(input("Presione Enter para continuar"))
                     elif Opcion==6:
-                        print("Horario")
-                    elif Opcion==7:
                         bol4=True
                         while bol4:
                             os.system("cls")
@@ -194,7 +188,7 @@ while bol:
                                 with open("index.json","w") as file:
                                     json.dump(Data,file)
                                 print(input("Presione Enter para continuar"))
-                    elif Opcion==8:
+                    elif Opcion==7:
                         bol5=True
                         while bol5:
                             print("=========================================================\n1).Agregar estudiantes a un grupo.\n2).Agregar profesor a un grupo.\n3).Salir")
@@ -220,7 +214,9 @@ while bol:
                                                             "Celular": PI[i]["Celular"],
                                                             "Fijo": PI[i]["Fijo"],
                                                             "Trainer": "",
-                                                            "Horas": "",
+                                                            "Ruta":"NodeJS",
+                                                            "Horas": "08:00 A.M - 12:00 P.M",
+                                                            "Rendimiento": "",
                                                             "Notas": [
                                                                 {
                                                                     "Filtro1": 0,
@@ -258,7 +254,9 @@ while bol:
                                                             "Celular": PI[i]["Celular"],
                                                             "Fijo": PI[i]["Fijo"],
                                                             "Trainer": "",
-                                                            "Horas": "",
+                                                            "Ruta":"Java",
+                                                            "Horas": "02:00 P.M - 06:00 P.M",
+                                                            "Rendimiento": "",
                                                             "Notas": [
                                                                 {
                                                                     "Filtro1": 0,
@@ -296,7 +294,9 @@ while bol:
                                                             "Celular": PI[i]["Celular"],
                                                             "Fijo": PI[i]["Fijo"],
                                                             "Trainer": "",
-                                                            "Horas": "",
+                                                            "Ruta":"NetCore",
+                                                            "Horas": "06:00 P.M - 10:00 P.M",
+                                                            "Rendimiento": "",
                                                             "Notas": [
                                                                 {
                                                                     "Filtro1": 0,
@@ -341,32 +341,17 @@ while bol:
                             elif Opcion==3:
                                 print(input("Presione Enter para salir al menu"))
                                 bol5=False    
-                    elif Opcion==9:
-                        bol5:True
-                        while bol5:
-                            print("Cual de las 3 rutas deseas ver \n1).Ruta NodeJS \n2).Ruta Java \n3).Ruta NetCore \n4).salir")
-                            Opcion=int(input("elige una ruta"))
-                            if Opcion==1:
-                                print("Ruta NodeJS")
-                            elif Opcion==2:
-                                print("Ruta Java")
-                            elif Opcion==3:
-                                print("Ruta NetCore")
-                            elif Opcion==4:
-                                print("Saliendo al menu de coordinacion.")
-                                print(input("Presione Enter para continuar"))
-                                bol5=False
-                    elif Opcion==10:
+                    elif Opcion==8:
                         print("==================================================")
                         for i in range(0,len(PR)):
                             print("===========Estudiante===========\nIdentificacion:",PR[i]["Identificacion"],"\nNombre:",PR[i]["Nombre"]+" "+PR[i]["Apellido"],"\nEstado:",PR[i]["Estado"],"\nGrupo:",PR[i]["Grupo"])
                         print(input("Presione Enter para continuar"))
-                    elif Opcion==11:
+                    elif Opcion==9:
                         for i in range (0,len(Data[1])):
-                            if Data[1]["Personas"][i]["Rendimiento"] == "alto":
+                            if Data[1]["Personas"][i]["Rendimiento"] == "False":
                                 print("Identificacion:",T123[i]["Identificacion"],"\nNombre:",  T123[i]["Nombre"]+" "+T123[i]["Apellido"],"\nRendimiento:",T123[i]["Rendimiento"])
                             print(input("presione enter continuar"))
-                    elif Opcion==12:
+                    elif Opcion==10:
                         bol3=True
                         while bol3:
                             os.system("cls")
@@ -374,21 +359,21 @@ while bol:
                             Opcion=int(input("¿Que grupo de estudiantes deseas ver?\n"))
                             if Opcion==1:
                                 for i in range(0,len(T1)):
-                                    print("===========T1===========\nIdentificacion:",T1[i]["Identificacion"],"\nNombre:",T1[i]["Nombre"]+" "+T1[i]["Apellido"],"\nDireccion:",T1[i]["Direccion"],"\nAcudiente:",T1[i]["Acudiente"],"\nTelefono:",T1[i]["Fijo"],"\nCelular:",T1[i]["Celular"],"\nEstado:",T1[i]["Estado"],"\nTrainer:",T1[i]["Trainer"])
+                                    print("===========T1===========\nIdentificacion:",T1[i]["Identificacion"],"\nNombre:",T1[i]["Nombre"]+" "+T1[i]["Apellido"],"\nDireccion:",T1[i]["Direccion"],"\nAcudiente:",T1[i]["Acudiente"],"\nTelefono:",T1[i]["Fijo"],"\nCelular:",T1[i]["Celular"],"\nEstado:",T1[i]["Estado"],"\nTrainer:",T1[i]["Trainer"],"\nRuta:",T1[i]["Ruta"],"\nHoras:",T1[i]["Horas"])
                                 print(input("Presione Enter para continuar"))
                             elif Opcion==2:
                                 for i in range(0,len(T1)):
-                                    print("===========T2===========\nIdentificacion:",T2[i]["Identificacion"],"\nNombre:",T2[i]["Nombre"]+" "+T2[i]["Apellido"],"\nDireccion:",T2[i]["Direccion"],"\nAcudiente:",T2[i]["Acudiente"],"\nTelefono:",T2[i]["Fijo"],"\nCelular:",T2[i]["Celular"],"\nEstado:",T2[i]["Estado"],"\nTrainer:",T2[i]["Trainer"])
+                                    print("===========T2===========\nIdentificacion:",T2[i]["Identificacion"],"\nNombre:",T2[i]["Nombre"]+" "+T2[i]["Apellido"],"\nDireccion:",T2[i]["Direccion"],"\nAcudiente:",T2[i]["Acudiente"],"\nTelefono:",T2[i]["Fijo"],"\nCelular:",T2[i]["Celular"],"\nEstado:",T2[i]["Estado"],"\nTrainer:",T2[i]["Trainer"],"\nRuta:",T2[i]["Ruta"],"\nHoras:",T2[i]["Horas"])
                                 print(input("Presione Enter para continuar"))
                             elif Opcion==3:
                                 for i in range(0,len(T1)):
-                                    print("===========T3===========\nIdentificacion:",T3[i]["Identificacion"],"\nNombre:",T3[i]["Nombre"]+" "+T3[i]["Apellido"],"\nDireccion:",T3[i]["Direccion"],"\nAcudiente:",T3[i]["Acudiente"],"\nTelefono:",T3[i]["Fijo"],"\nCelular:",T3[i]["Celular"],"\nEstado:",T3[i]["Estado"],"\nTrainer:",T3[i]["Trainer"])
+                                    print("===========T3===========\nIdentificacion:",T3[i]["Identificacion"],"\nNombre:",T3[i]["Nombre"]+" "+T3[i]["Apellido"],"\nDireccion:",T3[i]["Direccion"],"\nAcudiente:",T3[i]["Acudiente"],"\nTelefono:",T3[i]["Fijo"],"\nCelular:",T3[i]["Celular"],"\nEstado:",T3[i]["Estado"],"\nTrainer:",T3[i]["Trainer"],"\nRuta:",T3[i]["Ruta"],"\nHoras:",T3[i]["Horas"])
                                 print(input("Presione Enter para continuar"))
                             elif Opcion==4:
                                 print("Saliendo al menu de coordinacion.")
                                 print(input("Presione Enter para continuar"))
                                 bol3=False
-                    elif Opcion==13:
+                    elif Opcion==11:
                         Bol6=True
                         while Bol6:
                             CompaId=int(input("Ingrese el codigo del estudiante a quien deseas actualizar la nota de un filtro\n"))
@@ -445,23 +430,19 @@ while bol:
                                         print(input("Presione Enter para continuar"))
                                         with open("index.json","w") as file:
                                             json.dump(Data,file)
-                                        Bol6=False
-                            
+                                        Bol6=False          
                                 else:
                                     if i==len(T123)-1:
                                         print("No se encontro alguna persona por esa id.")
                                         print(input("Presione Enter para continuar"))
-                                        break
-                                   
-                    elif Opcion==14:
+                                        break                      
+                    elif Opcion==12:
                         print("Saliendo")
                         print(input("Presione Enter para continuar"))
-                        bol1=False
-                    
+                        bol1=False           
             else:
                 print("Este usuario no se encuenta registrado.")
-                print(input("Presione Enter para seguir al menu principal"))
-                
+                print(input("Presione Enter para seguir al menu principal"))       
         elif Opcion==2:#15
             bol2=True
             while bol2:
@@ -476,8 +457,7 @@ while bol:
                         if i==len(PR)-1:
                             print("No se encontro alguna persona por esa id.")
                             print(input("Presione Enter para continuar"))
-                            bol2=False
-                        
+                            bol2=False                
         elif Opcion==3:
                 bol2=True
                 while bol2:
@@ -513,10 +493,8 @@ while bol:
                         print("No se encontro alguna persona por esa id.")
                         print(input("Presione Enter para continuar"))
                         bol2=False
-    
         else:
             print("Adios <(;D")
             print("Presiona Enter para salir")
             bol=False
-
     #Hecho por Jerxon Correa CC.1004922559 y Valentina Molina CC.1007109135
