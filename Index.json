@@ -31,7 +31,8 @@
                 "Celular": "",
                 "Fijo": "",
                 "Trainer": "Esteban",
-                "Horas": "Nose",
+                "Ruta":"NodeJS",
+                "Horas": "08:00 A.M - 12:00 P.M",
                 "Rendimiento": "alto",
                 "Notas": [
                     {
@@ -54,7 +55,8 @@
                 "Celular": "",
                 "Fijo": "",
                 "Trainer": "Rocio",
-                "Horas": "Nose",
+                "Ruta":"Java",
+                "Horas": "02:00 P.M - 06:00 P.M",
                 "Rendimiento": "alto",
                 "Notas": [
                     {
@@ -77,7 +79,8 @@
                 "Celular": "",
                 "Fijo": "",
                 "Trainer": "Kyle",
-                "Horas": "Nose",
+                "Ruta":"NetCore",
+                "Horas": "06:00 P.M - 10:00 P.M",
                 "Rendimiento": "alto",
                 "Notas": [
                     {
@@ -90,7 +93,7 @@
                 ]
             },
             {
-                "Grupo": "t1",
+                "Grupo": "T1",
                 "Identificacion": 3,
                 "Nombre": "3",
                 "Apellido": "3",
@@ -99,11 +102,12 @@
                 "Acudiente": "3",
                 "Celular": 3,
                 "Fijo": 3,
-                "Trainer": "",
-                "Horas": "",
+                "Trainer": "Esteban",
+                "Ruta":"NodeJS",
+                "Horas": "08:00 A.M - 12:00 P.M",
                 "Notas": [
                     {
-                        "Filtro1": 0,
+                        "Filtro1": 1000.0,
                         "Filtro2": 0,
                         "Filtro3": 0,
                         "Filtro4": 0,
@@ -121,8 +125,9 @@
                 "Acudiente": "4",
                 "Celular": 4,
                 "Fijo": 4,
-                "Trainer": "",
-                "Horas": "",
+                "Trainer": "Esteban",
+                "Ruta":"NodeJS",
+                "Horas": "08:00 A.M - 12:00 P.M",
                 "Notas": [
                     {
                         "Filtro1": 0,
@@ -152,8 +157,7 @@
             {
                 "Identificacion": 1,
                 "Nombre": "Stiven",
-                "Apellido": "Carvajal",
-                "Contrase\u00f1a": 927391
+                "Apellido": "Carvajal"
             }
         ]
     },

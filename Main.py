@@ -207,113 +207,116 @@ while bol:
                                         CompaId=int(input("Ingrese la identificacion del estudiante que quieres agregar al grupo T1.\n"))
                                         for i in range(0,len(PI)):
                                             if CompaId == PI[i]["Identificacion"]:
-                                                if PI[i]["Estado"] == "ProcesoIngreso":
-                                                    Data[1]["Personas"].append({
-                                                        "Grupo": "T1",
-                                                        "Identificacion": PI[i]["Identificacion"],
-                                                        "Nombre": PI[i]["Nombre"],
-                                                        "Apellido": PI[i]["Apellido"],
-                                                        "Estado": "Cursando",
-                                                        "Direccion": PI[i]["Direccion"],
-                                                        "Acudiente": PI[i]["Acudiente"],
-                                                        "Celular": PI[i]["Celular"],
-                                                        "Fijo": PI[i]["Fijo"],
-                                                        "Trainer": "",
-                                                        "Horas": "",
-                                                        "Notas": [
-                                                            {
-                                                                "Filtro1": 0,
-                                                                "Filtro2": 0,
-                                                                "Filtro3": 0,
-                                                                "Filtro4": 0,
-                                                                "Filtro5": 0
-                                                            }
-                                                        ]
-                                                    })
-                                                    print(input("Presione Enter para continuar"))
-                                                    Data[0]["Personas"].pop(i)
-                                                    with open("index.json","w") as file:
-                                                        json.dump(Data,file)
+                                                if len(T1) <33:
+                                                    if PI[i]["Estado"] == "ProcesoIngreso":
+                                                        Data[1]["Personas"].append({
+                                                            "Grupo": "T1",
+                                                            "Identificacion": PI[i]["Identificacion"],
+                                                            "Nombre": PI[i]["Nombre"],
+                                                            "Apellido": PI[i]["Apellido"],
+                                                            "Estado": "Cursando",
+                                                            "Direccion": PI[i]["Direccion"],
+                                                            "Acudiente": PI[i]["Acudiente"],
+                                                            "Celular": PI[i]["Celular"],
+                                                            "Fijo": PI[i]["Fijo"],
+                                                            "Trainer": "",
+                                                            "Horas": "",
+                                                            "Notas": [
+                                                                {
+                                                                    "Filtro1": 0,
+                                                                    "Filtro2": 0,
+                                                                    "Filtro3": 0,
+                                                                    "Filtro4": 0,
+                                                                    "Filtro5": 0
+                                                                }
+                                                            ]
+                                                        })
+                                                        print(input("Presione Enter para continuar"))
+                                                        Data[0]["Personas"].pop(i)
+                                                        with open("index.json","w") as file:
+                                                            json.dump(Data,file)
+                                                    else:
+                                                        print("La persona ha reprobado el examen te esperamos la proxima.")
                                                 else:
-                                                    print("La persona ha reprobado el examen te esperamos la proxima.")
-                                            else:
-                                                if i==len(PrIn)-1:                                            
-                                                    print("La persona no se encuntra registrada por esa id.")
-                                                    print(input("Presione Enter para continuar"))
+                                                    if i==len(PrIn)-1:                                            
+                                                        print("La persona no se encuntra registrada por esa id.")
+                                                        print(input("Presione Enter para continuar"))
                                     elif Opcion==2:
                                         CompaId=int(input("Ingrese la identificacion del estudiante que quieres agregar al grupo T2.\n"))
                                         for i in range(0,len(PI)):
                                             if CompaId == PI[i]["Identificacion"]:
-                                                if PI[i]["Estado"] == "ProcesoIngreso":
-                                                    Data[1]["Personas"].append({
-                                                        "Grupo": "T2",
-                                                        "Identificacion": PI[i]["Identificacion"],
-                                                        "Nombre": PI[i]["Nombre"],
-                                                        "Apellido": PI[i]["Apellido"],
-                                                        "Estado": "Cursando",
-                                                        "Direccion": PI[i]["Direccion"],
-                                                        "Acudiente": PI[i]["Acudiente"],
-                                                        "Celular": PI[i]["Celular"],
-                                                        "Fijo": PI[i]["Fijo"],
-                                                        "Trainer": "",
-                                                        "Horas": "",
-                                                        "Notas": [
-                                                            {
-                                                                "Filtro1": 0,
-                                                                "Filtro2": 0,
-                                                                "Filtro3": 0,
-                                                                "Filtro4": 0,
-                                                                "Filtro5": 0
-                                                            }
-                                                        ]
-                                                    })
-                                                    print(input("Presione Enter para continuar"))
-                                                    Data[0]["Personas"].pop(i)
-                                                    with open("index.json","w") as file:
-                                                        json.dump(Data,file)
+                                                if len(T2) <33:
+                                                    if PI[i]["Estado"] == "ProcesoIngreso":
+                                                        Data[1]["Personas"].append({
+                                                            "Grupo": "T2",
+                                                            "Identificacion": PI[i]["Identificacion"],
+                                                            "Nombre": PI[i]["Nombre"],
+                                                            "Apellido": PI[i]["Apellido"],
+                                                            "Estado": "Cursando",
+                                                            "Direccion": PI[i]["Direccion"],
+                                                            "Acudiente": PI[i]["Acudiente"],
+                                                            "Celular": PI[i]["Celular"],
+                                                            "Fijo": PI[i]["Fijo"],
+                                                            "Trainer": "",
+                                                            "Horas": "",
+                                                            "Notas": [
+                                                                {
+                                                                    "Filtro1": 0,
+                                                                    "Filtro2": 0,
+                                                                    "Filtro3": 0,
+                                                                    "Filtro4": 0,
+                                                                    "Filtro5": 0
+                                                                }
+                                                            ]
+                                                        })
+                                                        print(input("Presione Enter para continuar"))
+                                                        Data[0]["Personas"].pop(i)
+                                                        with open("index.json","w") as file:
+                                                            json.dump(Data,file)
+                                                    else:
+                                                        print("La persona ha reprobado el examen te esperamos la proxima.")
                                                 else:
-                                                    print("La persona ha reprobado el examen te esperamos la proxima.")
-                                            else:
-                                                if i==len(PrIn)-1:                                            
-                                                    print("La persona no se encuntra registrada por esa id.")
-                                                    print(input("Presione Enter para continuar"))
+                                                    if i==len(PrIn)-1:                                            
+                                                        print("La persona no se encuntra registrada por esa id.")
+                                                        print(input("Presione Enter para continuar"))
                                     elif Opcion==3:
                                         CompaId=int(input("Ingrese la identificacion del estudiante que quieres agregar al grupo T3.\n"))
                                         for i in range(0,len(PI)):
                                             if CompaId == PI[i]["Identificacion"]:
-                                                if PI[i]["Estado"] == "ProcesoIngreso":
-                                                    Data[1]["Personas"].append({
-                                                        "Grupo": "T3",
-                                                        "Identificacion": PI[i]["Identificacion"],
-                                                        "Nombre": PI[i]["Nombre"],
-                                                        "Apellido": PI[i]["Apellido"],
-                                                        "Estado": "Cursando",
-                                                        "Direccion": PI[i]["Direccion"],
-                                                        "Acudiente": PI[i]["Acudiente"],
-                                                        "Celular": PI[i]["Celular"],
-                                                        "Fijo": PI[i]["Fijo"],
-                                                        "Trainer": "",
-                                                        "Horas": "",
-                                                        "Notas": [
-                                                            {
-                                                                "Filtro1": 0,
-                                                                "Filtro2": 0,
-                                                                "Filtro3": 0,
-                                                                "Filtro4": 0,
-                                                                "Filtro5": 0
-                                                            }
-                                                        ]
-                                                    })
-                                                    print(input("Presione Enter para continuar"))
-                                                    Data[0]["Personas"].pop(i)
-                                                    with open("index.json","w") as file:
-                                                        json.dump(Data,file)
+                                                if len(T3) <33:
+                                                    if PI[i]["Estado"] == "ProcesoIngreso":
+                                                        Data[1]["Personas"].append({
+                                                            "Grupo": "T3",
+                                                            "Identificacion": PI[i]["Identificacion"],
+                                                            "Nombre": PI[i]["Nombre"],
+                                                            "Apellido": PI[i]["Apellido"],
+                                                            "Estado": "Cursando",
+                                                            "Direccion": PI[i]["Direccion"],
+                                                            "Acudiente": PI[i]["Acudiente"],
+                                                            "Celular": PI[i]["Celular"],
+                                                            "Fijo": PI[i]["Fijo"],
+                                                            "Trainer": "",
+                                                            "Horas": "",
+                                                            "Notas": [
+                                                                {
+                                                                    "Filtro1": 0,
+                                                                    "Filtro2": 0,
+                                                                    "Filtro3": 0,
+                                                                    "Filtro4": 0,
+                                                                    "Filtro5": 0
+                                                                }
+                                                            ]
+                                                        })
+                                                        print(input("Presione Enter para continuar"))
+                                                        Data[0]["Personas"].pop(i)
+                                                        with open("index.json","w") as file:
+                                                            json.dump(Data,file)
+                                                    else:
+                                                        print("La persona ha reprobado el examen te esperamos la proxima.")
                                                 else:
-                                                    print("La persona ha reprobado el examen te esperamos la proxima.")
-                                            else:
-                                                if i==len(PrIn)-1:                                            
-                                                    print("La persona no se encuntra registrada por esa id.")
-                                                    print(input("Presione Enter para continuar"))
+                                                    if i==len(PrIn)-1:                                            
+                                                        print("La persona no se encuntra registrada por esa id.")
+                                                        print(input("Presione Enter para continuar"))
                                     elif Opcion==4:
                                         print(input("Presione Enter para ir al menu anterior"))
                                         bol4=False
