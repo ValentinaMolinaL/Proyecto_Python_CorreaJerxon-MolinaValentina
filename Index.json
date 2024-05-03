@@ -4,16 +4,40 @@
         "Personas": [
             {
                 "Grupo": "Inscrito",
-                "Identificacion": 9,
-                "Nombre": "9",
-                "Apellido": "9",
+                "Identificacion": 2,
+                "Nombre": "2",
+                "Apellido": "2",
                 "Estado": "ProcesoIngreso",
-                "Direccion": "9",
-                "Acudiente": "",
-                "Celular": 9,
-                "Fijo": 9,
+                "Direccion": "2",
+                "Acudiente": "2",
+                "Celular": 2,
+                "Fijo": 2,
                 "Nota": 0,
-                "NotaI": 80
+                "NotaI": 60
+            },
+            {
+                "Grupo": "Inscrito",
+                "Identificacion": 4,
+                "Nombre": "4",
+                "Apellido": "4",
+                "Estado": "Inscrito",
+                "Direccion": "4",
+                "Acudiente": "4",
+                "Celular": 4,
+                "Fijo": 4,
+                "Nota": 0
+            },
+            {
+                "Grupo": "Inscrito",
+                "Identificacion": 6,
+                "Nombre": "6",
+                "Apellido": "6",
+                "Estado": "Inscrito",
+                "Direccion": "6",
+                "Acudiente": "6",
+                "Celular": 6,
+                "Fijo": 6,
+                "Nota": 0
             }
         ]
     },
@@ -22,45 +46,29 @@
         "Personas": [
             {
                 "Grupo": "T1",
-                "Identificacion": 1009323,
-                "Nombre": "Isabel",
-                "Apellido": "Molina",
-                "Estado": "la mala",
-                "Direccion": "",
-                "Acudiente": "",
-                "Celular": "",
-                "Fijo": "",
-                "Trainer": "jOSE",
+                "Identificacion": 8,
+                "Nombre": "8",
+                "Apellido": "8",
+                "Estado": "Cursando",
+                "Direccion": "8",
+                "Acudiente": "8",
+                "Celular": 8,
+                "Fijo": 8,
+                "Trainer": "",
                 "Ruta": "NodeJS",
-                "Horas": "08:00 A.M - 12:00 P.M",
-                "Rendimiento": "alto",
-                "Notas": [
+                "Rutas":[
                     {
-                        "Filtro1": 60.0,
-                        "Filtro2": 0,
-                        "Filtro3": 0,
-                        "Filtro4": 0,
-                        "Filtro5": 0
+                        "Formal":"",
+                        "BaseD":"",
+                        "BaseD2":"",
+                        "Backed":""
                     }
-                ]
-            },
-            {
-                "Grupo": "T2",
-                "Identificacion": 102382,
-                "Nombre": "Luis",
-                "Apellido": "Lopez",
-                "Estado": "fuera",
-                "Direccion": "",
-                "Acudiente": "",
-                "Celular": "",
-                "Fijo": "",
-                "Trainer": "Rocio",
-                "Ruta": "Java",
-                "Horas": "02:00 P.M - 06:00 P.M",
-                "Rendimiento": "alto",
+                ],
+                "Horas": "08:00 A.M - 12:00 P.M",
+                "Rendimiento": "Alto",
                 "Notas": [
                     {
-                        "Filtro1": 0,
+                        "Filtro1": 60,
                         "Filtro2": 0,
                         "Filtro3": 0,
                         "Filtro4": 0,
@@ -70,41 +78,17 @@
             },
             {
                 "Grupo": "T3",
-                "Identificacion": 10233421,
-                "Nombre": "Juan",
-                "Apellido": "Montallanta",
+                "Identificacion": 9,
+                "Nombre": "9",
+                "Apellido": "9",
                 "Estado": "Cursando",
-                "Direccion": "",
+                "Direccion": "9",
                 "Acudiente": "",
-                "Celular": "",
-                "Fijo": "",
-                "Trainer": "Kyle",
+                "Celular": 9,
+                "Fijo": 9,
+                "Trainer": "",
                 "Ruta": "NetCore",
                 "Horas": "06:00 P.M - 10:00 P.M",
-                "Rendimiento": "alto",
-                "Notas": [
-                    {
-                        "Filtro1": 0,
-                        "Filtro2": 0,
-                        "Filtro3": 0,
-                        "Filtro4": 0,
-                        "Filtro5": 0
-                    }
-                ]
-            },
-            {
-                "Grupo": "T1",
-                "Identificacion": 2,
-                "Nombre": "2",
-                "Apellido": "2",
-                "Estado": "Cursando",
-                "Direccion": "2",
-                "Acudiente": "2",
-                "Celular": 2,
-                "Fijo": 2,
-                "Trainer": "",
-                "Ruta": "NodeJS",
-                "Horas": "08:00 A.M - 12:00 P.M",
                 "Rendimiento": "",
                 "Notas": [
                     {
@@ -138,6 +122,30 @@
                 "Nombre": "3",
                 "Apellido": "3",
                 "Estado": "Sapo"
+            },
+            {
+                "Identificacion": 2,
+                "Nombre": "2",
+                "Apellido": "2",
+                "Estado": "Mal Comportamiento"
+            },
+            {
+                "Identificacion": 1009323,
+                "Nombre": "Isabel",
+                "Apellido": "Molina",
+                "Estado": "Bajo rendimiento"
+            },
+            {
+                "Identificacion": 102382,
+                "Nombre": "Luis",
+                "Apellido": "Lopez",
+                "Estado": "Bajo rendimiento"
+            },
+            {
+                "Identificacion": 10233421,
+                "Nombre": "Juan",
+                "Apellido": "Montallanta",
+                "Estado": "Bajo rendimiento"
             }
         ]
     },
