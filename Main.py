@@ -893,6 +893,7 @@ while bol:
                     
                     with open("index.json","w") as file:
                         json.dump(Data,file)
+                        
         elif OpcionSesión=="3":
             for i in Data[1]["Personas"]:
                 if IdSesion == i["Identificacion"]:
