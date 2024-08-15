@@ -870,19 +870,38 @@ while bol:
         os.system("cls")
         print("""============Hola Camper==================
               Para que el registro de tu entrada sea exitoso ingresa los siguientes datos""")
-        IdSesión=str(input("Ingrese su ID.\n"))
+        IdSesion=int(input("Ingrese su ID.\n"))
         FechaSesión=str(datetime.datetime.now())
         print("Que actividad realizaras \n1).Clases. \n2).Labor Social. \n3).Asesorias.")
-        OpcionSesión=str(input("Ingresa un numero para elegir la ctividad"))
+        OpcionSesión=str(input("Ingresa un numero para elegir la actividad: "))
         if OpcionSesión=="1":
-            print("clase")
+            for i in Data[1]["Personas"]:
+                if IdSesion == i["Identificacion"]:
+                    i["Sesion"]="Activa"
+                    i["FechaEntrada"]=FechaSesión
+                    i["Actividad"]="Clase"
+                    
+                    with open("index.json","w") as file:
+                        json.dump(Data,file)
+
         elif OpcionSesión=="2":
-            print("Labor Social")
+            for i in Data[1]["Personas"]:
+                if IdSesion == i["Identificacion"]:
+                    i["Sesion"]="Activa"
+                    i["FechaEntrada"]=FechaSesión
+                    i["Actividad"]="Labor Social"
+                    
+                    with open("index.json","w") as file:
+                        json.dump(Data,file)
         elif OpcionSesión=="3":
-            print("Asesorias")
-
-
-
+            for i in Data[1]["Personas"]:
+                if IdSesion == i["Identificacion"]:
+                    i["Sesion"]="Asesorias"
+                    i["FechaEntrada"]=FechaSesión
+                    i["Actividad"]="Clase"
+                    
+                    with open("index.json","w") as file:
+                        json.dump(Data,file)
 
     elif Opcion=="6":
         os.system("cls")

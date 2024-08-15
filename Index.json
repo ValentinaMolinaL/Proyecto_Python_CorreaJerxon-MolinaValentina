@@ -68,9 +68,9 @@
                         "Filtro5": 0
                     }
                 ],
-                "Sesion": "Inactiva",
-                "FechaEntrada": "-----",
-                "Actividad": "-----"
+                "Sesion": "Activa",
+                "FechaEntrada": "2024-08-15 12:09:22.984947",
+                "Actividad": "Clase"
             },
             {
                 "Grupo": "T3",
@@ -133,7 +133,10 @@
                         "Filtro4": 0,
                         "Filtro5": 0
                     }
-                ]
+                ],
+                "Sesion": "Inactiva",
+                "FechaEntrada": "-----",
+                "Actividad": "-----"
             },
             {
                 "Grupo": "T3",
@@ -164,9 +167,9 @@
                         "Filtro5": 0
                     }
                 ],
-                "Sesion": "Inactiva",
-                "FechaEntrada": "-----",
-                "Actividad": "-----"
+                "Sesion": "Activa",
+                "FechaEntrada": "2024-08-15 12:09:35.480912",
+                "Actividad": "Clase"
             }
         ]
     },
