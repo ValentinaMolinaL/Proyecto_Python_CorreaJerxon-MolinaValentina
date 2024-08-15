@@ -37,7 +37,7 @@ while bol:
             T3.append(Data[1]["Personas"][i])#T3=Solo guarda los estudiantes que pertenecen a T3
     os.system("cls")
     #Menu principal
-    print("================================================\n1).Coordinacion.\n2).Trainer\n3).Estudiante\n4).Consulta de aprobacion.\n5).Registrar entrada. \n6).Salir\n================================================")
+    print("================================================\n1).Coordinacion.\n2).Trainer\n3).Estudiante\n4).Consulta de aprobacion\n5).Iniciar sesión\n6).Cerrar sesión \n7).Salir\n================================================")
     Opcion=str(input("Ingrese un numero para ir a la opcion deseada.\n"))
     if Opcion=="1":
         intento=True
