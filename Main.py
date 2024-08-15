@@ -1,5 +1,9 @@
 #Importamos Json
-import json,os 
+import json,os
+import datetime
+
+Fecha = str(datetime.datetime.now())
+
 with open("Index.json",encoding="utf-8") as file:
     Data=json.load(file)
 Inicio=False
@@ -500,7 +504,10 @@ while bol:
                                                                 "Filtro4": 0,
                                                                 "Filtro5": 0
                                                             }
-                                                        ]
+                                                        ],
+                                                        "Sesion":"Inactiva",
+                                                        "FechaEntrada": "-----",
+                                                        "Actividad":"-----"
                                                     })
                                                     print(input("Presione Enter para continuar"))
                                                     Data[0]["Personas"].pop(i)
@@ -556,7 +563,10 @@ while bol:
                                                                 "Filtro4": 0,
                                                                 "Filtro5": 0
                                                             }
-                                                        ]
+                                                        ],
+                                                        "Sesion":"Inactiva",
+                                                        "FechaEntrada": "-----",
+                                                        "Actividad":"-----"
                                                     })
                                                     print(input("Presione Enter para continuar"))
                                                     Data[0]["Personas"].pop(i)
@@ -612,7 +622,10 @@ while bol:
                                                                 "Filtro4": 0,
                                                                 "Filtro5": 0
                                                             }
-                                                        ]
+                                                        ],
+                                                        "Sesion":"Inactiva",
+                                                        "FechaEntrada": "-----",
+                                                        "Actividad":"-----"
                                                     })
                                                     print(input("Presione Enter para continuar"))
                                                     Data[0]["Personas"].pop(i)
