@@ -33,7 +33,7 @@ while bol:
             T3.append(Data[1]["Personas"][i])#T3=Solo guarda los estudiantes que pertenecen a T3
     os.system("cls")
     #Menu principal
-    print("================================================\n1).Coordinacion.\n2).Trainer\n3).Estudiante\n4).Consulta de aprobacion.\n5).Salir\n================================================")
+    print("================================================\n1).Coordinacion.\n2).Trainer\n3).Estudiante\n4).Consulta de aprobacion.\n5).Registrar entrada. \n6).Salir\n================================================")
     Opcion=str(input("Ingrese un numero para ir a la opcion deseada.\n"))
     if Opcion=="1":
         intento=True
@@ -852,7 +852,26 @@ while bol:
                     print("No se encontro alguna persona por esa id.")
                     print(input("Presione Enter para continuar"))
                     bol2=False
-    elif Opcion=="5":
+
+    elif Opcion=="5":# Registrar la entrada de todos los camper que ingresan a la plataforma.
+        os.system("cls")
+        print("""============Hola Camper==================
+              Para que el registro de tu entrada sea exitoso ingresa los siguientes datos""")
+        IdSesión=str(input("Ingrese su ID.\n"))
+        FechaSesión=str(datatime.datatime.now())
+        print("Que actividad realizaras \n1).Clases. \n2).Labor Social. \n3).Asesorias.")
+        OpcionSesión=str(input("Ingresa un numero para elegir la ctividad"))
+        if OpcionSesión=="1":
+            print("clase")
+        elif OpcionSesión=="2":
+            print("Labor Social")
+        elif OpcionSesión=="3":
+            print("Asesorias")
+
+
+
+
+    elif Opcion=="6":
         os.system("cls")
         print("=======================================\nAdios <(;D\n======================================")
         print("Presiona Enter para salir")
