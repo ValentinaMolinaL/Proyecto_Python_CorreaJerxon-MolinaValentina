@@ -871,7 +871,7 @@ while bol:
         print("""============Hola Camper==================
               Para que el registro de tu entrada sea exitoso ingresa los siguientes datos""")
         IdSesión=str(input("Ingrese su ID.\n"))
-        FechaSesión=str(datatime.datatime.now())
+        FechaSesión=str(datetime.datetime.now())
         print("Que actividad realizaras \n1).Clases. \n2).Labor Social. \n3).Asesorias.")
         OpcionSesión=str(input("Ingresa un numero para elegir la ctividad"))
         if OpcionSesión=="1":
