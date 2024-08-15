@@ -906,6 +906,20 @@ while bol:
 
     elif Opcion=="6":
         os.system("cls")
+        print("""============Hola Camper==================
+              Para cerrar sesión ingresa los siguientes datos""")
+        IdSesión=str(input("Ingrese su ID.\n"))
+        for i in Data["Personas"]:
+            if IdSesión == i["Identificacion"]:
+                i["Sesion"]="Finalizada"
+                i["FechaEntrada"] = "-----"
+                i["Actividad"] = "-----"
+                
+                with open("Index.json","w") as file:
+                    json.dump(Data,file)
+
+    elif Opcion=="7":
+        os.system("cls")
         print("=======================================\nAdios <(;D\n======================================")
         print("Presiona Enter para salir")
         bol=False
